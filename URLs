@@ -1,0 +1,5 @@
+# API
+http://maps.googleapis.com/maps/api/staticmap?center=47.457809,8.55732&zoom=13&size=640x640&sensor=true&maptype=satellite&scale=2
+
+# Tiles
+http://khm0.google.ch/kh/v=109&src=app&x=4290&y=2865&z=13&s=Galileo
