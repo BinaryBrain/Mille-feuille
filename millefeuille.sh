@@ -61,6 +61,7 @@ do
 		x=$(($i-($numTileX/2)))
 		y=$(($j-($numTileY/2)))
 		wget -O "$y"-"$x".jpg "http://khm0.google.ch/kh/v=109&src=app&x=${x}&y=${y}&z=${zoom}&s=Galileo"
+		sleep 2
 	done
 done
 
