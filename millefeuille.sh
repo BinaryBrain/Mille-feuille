@@ -51,14 +51,19 @@ fi
 # PREPARING
 mkdir output
 cd output
+rm -R *
 
 # WGET
-for ((i=$tileX; i <= $(($tileX+$numTileX)); i++))
+for ((i=$tileX; i < $(($tileX+$numTileX)); i++))
 do
-	for ((j=$tileY; j <= $(($tileY+$numTileY)); j++))
+	for ((j=$tileY; j < $(($tileY+$numTileY)); j++))
 	do
 		x=$(($i-($numTileX/2)))
 		y=$(($j-($numTileY/2)))
 		wget -O "$y"-"$x".jpg "http://khm0.google.ch/kh/v=109&src=app&x=${x}&y=${y}&z=${zoom}&s=Galileo"
 	done
 done
+
+# MONTAGE
+montage -monitor -tile ${numTileX}x${numTileY}  -geometry +0+0 * montage.jpg
+
