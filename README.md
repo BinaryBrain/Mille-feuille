@@ -1,14 +1,16 @@
 Mille-feuille
 =============
 
-Tool to get a big map base on Google Maps (satellite view).
+Mille-feuille is a tool made to get some big pictures base on Google Maps satellite or flight view.
 
 # Usage
-Usage: millefeuille [-mode] [position] [size] [zoom]  
-    Tiles Mode:  
-        millefeuille -t TileX TileY  width(px) height(px) zoom  
-    GPS Mode (Not implemented yet):  
-        millefeuille -g lat° long° width(px) height(px) zoom  
+	Usage: millefeuille [-mode] [position] [size] [zoom]  
+		Tiles Mode:  
+			millefeuille -t TileX TileY  width(px) height(px) zoom  
+		Flight Mode:
+			millefeuille -f TileX TileY  width(px) height(px) zoom
+		GPS Mode (Not implemented yet):  
+			millefeuille -g lat° long° width(px) height(px) zoom  
 
 # How it works
 ## Tile mode
@@ -25,3 +27,6 @@ _I'm not working on it know. But the idea is to use Google Maps API._
 # Warning
 This script can spam a bit Google Maps' servers. So I get this message:
 > We're sorry but your computer or network may be sending automated queries. To protect our users, we can't process your request right now.
+That's why the script sleeps 2 seconds between each tile downloaded. Now you can download over 800 tiles to generate your image.  
+But if you don't trust me or you want to be sure that Google doesn't block your Google Maps, you should spoof your IP address by using a proxy, a VPN, Tor, or anything like this.
+This way, if Google ban your IP address, you just have to turn off your spoof.
