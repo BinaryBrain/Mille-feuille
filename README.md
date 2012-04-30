@@ -22,9 +22,8 @@ At least, it will use the `montage` command to pack every tiles in a big image.
 _I'm not working on it know. But the idea is to use Google Maps API._
 
 # Dependencies
-
-Linux, (Should run on Mac OS X)
-[Image Magick - montage] (http://www.imagemagick.org/script/montage.php)
+* Linux, (Should run on Mac OS X)
+* [Image Magick - montage] (http://www.imagemagick.org/script/montage.php)
 
 # Warnings
 ## Google ban
