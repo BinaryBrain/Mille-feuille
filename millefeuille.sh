@@ -63,6 +63,8 @@ fi
 # PREPARING
 mkdir output
 cd output
+mkdir tiles
+cd tiles
 rm -R *
 
 # WGET
