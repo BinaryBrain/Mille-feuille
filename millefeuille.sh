@@ -3,11 +3,11 @@
 mode=$1
 sizeX=$4;
 sizeY=$5;
-zoom=$6
+zoom=$6;
 
-tileSize=256
+tileSize=256;
 
-more=""
+more="";
 
 divCeil () {
 	a=$1
@@ -52,6 +52,7 @@ then
 	else
 		v=109;
 	fi
+
 # GPS
 elif [[ $mode == "-g" ]]
 then
@@ -76,7 +77,7 @@ do
 		x=$(($i-($numTileX/2)));
 		y=$(($j-($numTileY/2)));
 		wget -O "$y"-"$x".jpg "http://khm0.google.ch/kh/v=${v}&x=${x}&y=${y}&z=${zoom}${more}"
-
+		
 		# If you remove the sleep, Google may block you for spamming.
 		sleep 2;
 	done
