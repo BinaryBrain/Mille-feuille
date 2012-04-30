@@ -83,5 +83,5 @@ do
 done
 
 # MONTAGE
-montage -monitor -tile ${numTileX}x${numTileY} -geometry +0+0 * montage.jpg
-display montage.jpg
+montage -monitor -tile ${numTileX}x${numTileY} -geometry +0+0 * ../montage.jpg
+display ../montage.jpg

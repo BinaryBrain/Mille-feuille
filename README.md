@@ -12,20 +12,24 @@ Mille-feuille is a tool made to get some big pictures base on Google Maps satell
 		GPS Mode (Not implemented yet):  
 			millefeuille -g lat° long° width(px) height(px) zoom  
 
+# Dependencies
+* Linux, (Should run on Mac OS X)
+* [Image Magick - montage] (http://www.imagemagick.org/script/montage.php)
+
 # How it works
 ## Tile mode
 The script will just compute how many tiles you need to cover an image of the dimention you entered.  
 Then, it will get every tiles he needs around the center using `wget`.  
 At least, it will use the `montage` command to pack every tiles in a big image.  
 
+## Flight mode
+The flight mode works exactly as the tile mode with a few parameters more.
+_Note: The script render only pictures taken from the south._
+
 ## GPS mode
 _I'm not working on it know. But the idea is to use Google Maps API._
 
-# Dependencies
-* Linux, (Should run on Mac OS X)
-* [Image Magick - montage] (http://www.imagemagick.org/script/montage.php)
-
-# Warnings
+# Warning!
 ## Google ban
 This script can spam a bit Google Maps' servers. So I get this message:
 > We're sorry but your computer or network may be sending automated queries. To protect our users, we can't process your request right now.
