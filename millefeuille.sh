@@ -1,4 +1,5 @@
 #!/bin/bash
+cd `dirname $0`
 
 mode=$1
 sizeX=$4;
@@ -43,7 +44,8 @@ then
 	tileY=$3;
 	numTileX=$(divCeil $sizeX $tileSize);
 	numTileY=$(divCeil $sizeY $tileSize);
-	echo "We'll need to download" $numTileX "x" $numTileY "tiles";
+	total=$(($numTileX*$numTileY));
+	echo "We'll need to download" $numTileX "x" $numTileY "=" $total "tiles";
 
 	if [[ $mode == "-f" ]]
 	then
@@ -69,10 +71,17 @@ cd tiles
 rm -R *
 
 # WGET
+n=0
 for ((i=$tileX; i < $(($tileX+$numTileX)); i++))
 do
 	for ((j=$tileY; j < $(($tileY+$numTileY)); j++))
 	do
+		n=$(($n+1))
+		echo ""
+		echo "/////////////////////////////////////////"
+		echo "// Downloading tile" $n "on" $total;
+		echo "/////////////////////////////////////////"
+		echo ""
 		# The map will be centered on the tile you ask for.
 		x=$(($i-($numTileX/2)));
 		y=$(($j-($numTileY/2)));
@@ -84,5 +93,10 @@ do
 done
 
 # MONTAGE
+echo ""
+echo "/////////////////////////////////////////"
+echo "// Joining tiles to make a huge image. //"
+echo "/////////////////////////////////////////"
+echo ""
 montage -monitor -tile ${numTileX}x${numTileY} -geometry +0+0 * ../montage.jpg
 display ../montage.jpg
