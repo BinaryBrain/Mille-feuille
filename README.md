@@ -1,7 +1,7 @@
 Mille-feuille
 =============
 
-Mille-feuille is a tool made to get some big pictures base on Google Maps satellite or flight view.
+Mille-feuille is a tool made to get some big pictures based on Google Maps satellite or flight view.
 
 # Usage
 	Usage: millefeuille [-mode] [position] [size] [zoom]  
