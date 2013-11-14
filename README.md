@@ -23,7 +23,7 @@ Then, it will get every tiles he needs around the center using `wget`.
 At least, it will use the `montage` command to pack every tiles in a big image.  
 
 ## Flight mode
-The flight mode works exactly as the tile mode with a few parameters more.
+The flight mode works exactly as the tile mode with a few parameters more.  
 _Note: The script render only pictures taken from the south._
 
 ## GPS mode
